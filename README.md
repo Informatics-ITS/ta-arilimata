@@ -1,31 +1,27 @@
 # 🏁 Tugas Akhir (TA) - Final Project
 
-**Nama Mahasiswa**: [Nama Lengkap]  
-**NRP**: [Nomor Registrasi Pokok]  
-**Judul TA**: [Judul Tugas Akhir]  
-**Dosen Pembimbing**: [Nama Dosen]  
-**Dosen Ko-pembimbing**: [Nama Dosen]
+**Nama Mahasiswa**: Ariella Firdaus Imata  
+**NRP**: 5025211138  
+**Judul TA**: PENAMBAHAN CATATAN PENERBANGAN DRONE PADA 
+LINI MASA FORENSIK 
+**Dosen Pembimbing**: Hudan Studiawan, S.Kom., M.Kom.,Ph.D.
+**Dosen Ko-pembimbing**: Dr. Baskoro Adi Pratomo, S.Kom., M.Kom.
 
 ---
 
 ## 📺 Demo Aplikasi  
 Embed video demo di bawah ini (ganti `VIDEO_ID` dengan ID video YouTube Anda):  
 
-[![Demo Aplikasi](https://i.ytimg.com/vi/zIfRMTxRaIs/maxresdefault.jpg)](https://www.youtube.com/watch?v=VIDEO_ID)  
+[![Demo Aplikasi](/assets/image.png)](https://www.youtube.com/watch?v=JFDYqSBl2NU)  
 *Klik gambar di atas untuk menonton demo*
 
 ---
 
-*Konten selanjutnya hanya merupakan contoh awalan yang baik. Anda dapat berimprovisasi bila diperlukan.*
 
 ## 🛠 Panduan Instalasi & Menjalankan Software  
 
 ### Prasyarat  
-- Daftar dependensi (contoh):
-  - Python 3.10+
-  - Node.js v18+
-  - MySQL 8.0
-  - [Lainnya...]
+- Python 3.10+
 
 ### Langkah-langkah  
 1. **Clone Repository**  
@@ -34,27 +30,23 @@ Embed video demo di bawah ini (ganti `VIDEO_ID` dengan ID video YouTube Anda):
    ```
 2. **Instalasi Dependensi**
    ```bash
-   cd [folder-proyek]
+   cd plaso/plaso
    pip install -r requirements.txt  # Contoh untuk Python
-   npm install  # Contoh untuk Node.js
+   pip install setuptools
    ```
 3. **Konfigurasi**
-- Salin/rename file .env.example menjadi .env
-- Isi variabel lingkungan sesuai kebutuhan (database, API key, dll.)
+- Masuk ke dalam folder plaso/plaso dan build aplikasi
+   ```bash
+   python setup.py build
+   python setup.py install
+   ```
 4. **Jalankan Aplikasi**
    ```bash
-   python main.py  # Contoh untuk Python
-   npm start      # Contoh untuk Node.js
+   log2timeline path/to/output.plaso path/to/artifact   # Membuat plaso storage
+   psort -w path/to/output.csv path/to/storage.plaso   # Ekstrak Plaso Storage yang dibuat
    ```
-5. Buka browser dan kunjungi: `http://localhost:3000` (sesuaikan dengan port proyek Anda)
-
----
-
-## 📚 Dokumentasi Tambahan
-
-- [![Dokumentasi API]](docs/api.md)
-- [![Diagram Arsitektur]](docs/architecture.png)
-- [![Struktur Basis Data]](docs/database_schema.sql)
+   Contoh file artefak, storage.plaso, dan output.csv sudah disediakan pada folder artifact dan output_plaso
+5. Buka file .csv yang telah dibuat untuk melihat hasil parsing drone
 
 ---
 
@@ -71,5 +63,6 @@ Pastikan proyek memenuhi kriteria berikut sebelum submit:
 ## ⁉️ Pertanyaan?
 
 Hubungi:
-- Penulis: [email@mahasiswa]
-- Pembimbing Utama: [email@pembimbing]
+- Penulis: [aril.imata061103@gmail.com]
+- Pembimbing Utama: [hudan@pembimbing]
+- Co-Pembimbing: [baskoro@pembimbing]
