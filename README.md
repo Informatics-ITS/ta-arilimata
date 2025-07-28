@@ -10,7 +10,7 @@ LINI MASA FORENSIK
 ---
 
 ## 📺 Demo Aplikasi  
-Embed video demo di bawah ini (ganti `VIDEO_ID` dengan ID video YouTube Anda):  
+
 
 [![Demo Aplikasi](/assets/image.png)](https://www.youtube.com/watch?v=JFDYqSBl2NU)  
 *Klik gambar di atas untuk menonton demo*
@@ -27,36 +27,36 @@ Embed video demo di bawah ini (ganti `VIDEO_ID` dengan ID video YouTube Anda):
 1. **Clone Repository**  
    ```bash
    git clone https://github.com/Informatics-ITS/TA.git
+   git clone https://github.com/log2timeline/plaso.git
    ```
-2. **Instalasi Dependensi**
+2. **Masukkan files ```init.py``` dan ```dji_mavic.py``` yang ada pada  ```plaso_files/parsers``` kedalam directory plaso ```plaso/plaso/parsers```**
+
+3. **Masukkan files ```plaso_files/formatters/generic.yaml``` kedalam directory plaso ```plaso/data/formatters/generic.yaml```**
+
+4. **Masukkan files dalam ```plaso_files/formatters/timeliner.yaml``` kedalam directory plaso ```plaso/data/timeliner.yaml```**
+
+***Step dibawah akan dilakukan pada repository plaso yang telah di clone***
+
+5. **Instalasi Dependensi**
    ```bash
    cd plaso/plaso
    pip install -r requirements.txt  # Contoh untuk Python
    pip install setuptools
    ```
-3. **Konfigurasi**
-- Masuk ke dalam folder plaso/plaso dan build aplikasi
+6. **Konfigurasi**  
+   Masuk ke dalam folder plaso/plaso dan build aplikasi
    ```bash
    python setup.py build
    python setup.py install
    ```
-4. **Jalankan Aplikasi**
+7. **Jalankan Aplikasi**
    ```bash
    log2timeline path/to/output.plaso path/to/artifact   # Membuat plaso storage
    psort -w path/to/output.csv path/to/storage.plaso   # Ekstrak Plaso Storage yang dibuat
    ```
    Contoh file artefak, storage.plaso, dan output.csv sudah disediakan pada folder artifact dan output_plaso
-5. Buka file .csv yang telah dibuat untuk melihat hasil parsing drone
 
----
-
-## ✅ Validasi
-
-Pastikan proyek memenuhi kriteria berikut sebelum submit:
-- Source code dapat di-build/run tanpa error
-- Video demo jelas menampilkan fitur utama
-- README lengkap dan terupdate
-- Tidak ada data sensitif (password, API key) yang ter-expose
+8. **Buka file .csv yang telah dibuat untuk melihat hasil parsing drone**
 
 ---
 
