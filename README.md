@@ -3,8 +3,8 @@
 **Nama Mahasiswa**: Ariella Firdaus Imata  
 **NRP**: 5025211138  
 **Judul TA**: PENAMBAHAN CATATAN PENERBANGAN DRONE PADA 
-LINI MASA FORENSIK 
-**Dosen Pembimbing**: Hudan Studiawan, S.Kom., M.Kom.,Ph.D.
+LINI MASA FORENSIK  
+**Dosen Pembimbing**: Hudan Studiawan, S.Kom., M.Kom.,Ph.D.  
 **Dosen Ko-pembimbing**: Dr. Baskoro Adi Pratomo, S.Kom., M.Kom.
 
 ---
